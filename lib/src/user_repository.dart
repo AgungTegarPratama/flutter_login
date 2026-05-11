@@ -1,4 +1,4 @@
-import 'package:ppb2_flutter_login/src/models/models.dart';
+import 'package:flutter_login/src/models/models.dart';
 import 'package:uuid/uuid.dart';
 
 
