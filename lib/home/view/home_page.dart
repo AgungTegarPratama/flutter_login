@@ -21,13 +21,14 @@ class HomePage extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
-        backgroundColor: Colors.blue, // warna biru
-        foregroundColor: Colors.white, // warna icon & text
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
       ),
 
       body: const Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center, // tambahan
           children: [
             _UserId(),
             SizedBox(height: 20),
@@ -64,11 +65,15 @@ class _UserId extends StatelessWidget {
       (AuthenticationBloc bloc) => bloc.state.user.id,
     );
 
-    return Text(
-      'UserID: $userId',
-      style: const TextStyle(
-        fontSize: 18,
-        fontWeight: FontWeight.bold,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Text(
+        'UserID: $userId',
+        textAlign: TextAlign.center, // tambahan
+        style: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
